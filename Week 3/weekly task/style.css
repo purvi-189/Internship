@@ -1,0 +1,66 @@
+body{
+    background-color: #2f3e46;
+}
+table,th ,td{
+    border: 1px solid white;
+    /* border-collapse: collapse; */
+    margin: auto;
+    margin-top: 200px;
+    padding: 15px;
+
+  
+}
+#head{
+    background-color: #231942;
+    color: #ffffff;
+    size: 500px  ;
+    
+}
+tr{
+    background-color: #4cc9f0;
+    color: #000000;
+    font-weight: bold;
+}
+.update{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:12em;
+    display: none;
+    margin-top: -15em; 
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+     border: 1px solid #ccc;
+    background-color: #f3f3f3;
+} 
+
+/***************************************************** search */
+
+#mid{
+    padding-top: 100vw;
+    font-size: 150%;
+}
+
+
+
+.container{
+    align-items: center;
+}
+
+
+.findSection{
+    
+    background-color: #1b263b;
+    border: 6px solid #ffffff;
+    padding-top: 10px;
+    
+    color: #4cc9f0;
+    height: 300px; 
+    width: 300px; 
+    
+    margin-left: auto; 
+    margin-right: auto;
+
+    
+    width: 450px;
+}

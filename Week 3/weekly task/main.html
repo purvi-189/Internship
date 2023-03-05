@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- search -->
+
+        <div class="container">
+        <div class="findSection" id="searchUser">
+            <center>
+            <form id="SearchFormData">
+                <input id="sid" type="text" name="id" hidden>
+                <label for="searchField" id="mid">Select Field</label><br>
+                <select name="afield" id="afield">
+                    <option value="none" class="lar" selected disabled hidden>Select The Field</option>
+                    <option value="First Name">First Name</option>
+                    <option value="Last Name">Last Name</option>
+                </select><br><br>
+                
+                <label for="text" id="mid">Enter The Text</label><br>
+                <input type="text" id="text" name="text" ><br><br>
+                <input type="button" value="Search" id="searchbtn">
+            </form> 
+        </center>
+        </div>
+    </div>
+    <!-- search end -->
+   
+    <div id="data">
+    <table id="mytable">
+        <tr id="head">
+            <th> First Name</th>
+            <th> Last Name</th>
+            <th> Email</th>
+            <th> Age </th>
+            <th> Image</th>
+            <th> username</th>
+            <th> password</th>
+            <th> update </th>
+            <th> delete </th>
+        </tr>
+
+        <tbody id="tb">
+        </tbody>
+
+    </table>
+
+    <div id="update" class="update">
+        <center>
+        <form id="formData">
+            <input id="id" type="text" name="id" hidden>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" ><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname" ><br><br>
+            <input type="button" value="update" id="submitbtn">
+        </form> 
+        </center>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: blue;
+  background-color: rgb(220, 220, 27);
+}
+
+#container {
+  width: 680px;
+  border: 2px solid green;
+}/*# sourceMappingURL=mystyle.css.map */

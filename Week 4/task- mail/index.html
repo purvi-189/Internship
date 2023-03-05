@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+         <title>Sports News</title>
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+
+body{
+    background-color: #2f3e46;
+}
+table,th ,td{
+    border: 1px solid white;
+    /* border-collapse: collapse; */
+    margin: auto;
+    margin-top: 200px;
+    padding: 15px;
+
+  
+}
+#head{
+    background-color: #231942;
+    color: #ffffff;
+    size: 500px  ;
+    
+}
+tr{
+    background-color: #4cc9f0;
+    color: #000000;
+    font-weight: bold;
+}
+.update{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:12em;
+    display: none;
+    margin-top: -15em; 
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+     border: 1px solid #ccc;
+    background-color: #f3f3f3;
+} 
+
+</style>
+
+<body>
+    <div id="data">
+        <table id="mytable">
+            <tr id="head">
+                            <th hidden>Id</th>
+                            <th>Author</th>
+                            <th>Content</th>
+                            <th>Date</th>
+                            <th>Image</th>
+                            <th>Title</th>
+            </tr>
+    
+            <tbody id="tb">
+            </tbody>
+        </table>
+        
+        <script>
+
+    fetch('https://inshortsapi.vercel.app/news?category=sports').then( (data)=> {
+    // console.log(data)
+
+    return data.json();
+} ).then( (objectData)=>{
+    console.log(objectData);
+
+    let tableData ="";
+    objectData.data.map( (values,index)=>{
+
+        console.log(values);
+        console.log(index);
+        tableData +=   `<tr>
+        <td hidden>${values.id}</td>    
+        <td id="fn[${index}]">${values.author}</td>
+        <td id="ln[${index}]">${values.content}</td>
+        <td>${values.date}</td>
+        <td><img width="50" height="50" src="${values.imageUrl}"/></td>
+        <td>${values.title}</td>
+    </tr>`
+
+    });
+
+    document.getElementById("tb").innerHTML = tableData;
+})
+
+
+</script>
+</body>
+
+</html>
